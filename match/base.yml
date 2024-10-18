@@ -1,0 +1,410 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
+  - trigger: ";ll"
+    replace: "→ "
+  - trigger: ";ii"
+    replace: "↑ "
+  - trigger: ";jj"
+    replace: "← "
+  - trigger: ";kk"
+    replace: "↓ "
+  - trigger: ";pp"
+    replace: "⇆"
+
+  - trigger: ";;"
+    replace: "• "
+
+  - trigger: ";-"
+    replace: "--- $|$ "
+
+
+  - trigger: ";ff"
+    replace: "🔥"
+  
+  - trigger: ";ut"
+    replace: "【UT指摘】"
+
+  - trigger: ";qu"
+    replace: "【$|$】"
+  
+  - trigger: ";lk"
+    replace: "[$|$]()"
+  
+  - trigger: ";mm"
+    replace: "[$|$]()"
+  
+  
+  - trigger: ";qa"
+    replace: "Q&A "
+  
+  - trigger: ";ltx"
+    replace: "log task xong"
+  
+
+
+  - trigger: ";gc"
+    replace: "※ "
+
+  - trigger: ";1"
+    replace: "① "
+
+
+  - trigger: ";2"
+    replace: "② "
+
+  - trigger: ";3"
+    replace: "③ "
+  
+  - trigger: ";4"
+    replace: "④ "
+  
+  - trigger: ";5"
+    replace: "⑤ "
+
+  - trigger: ";r1"
+    replace: "record ①  "
+
+  - trigger: ";r2"
+    replace: "record ②   "
+
+
+  - trigger: ";inp"
+    replace: "in progress "
+
+  - trigger: ";ss"
+    replace: "subscription-service "
+
+  - trigger: ";rkn"
+    replace: "rút kinh nghiệm "
+    propagate_case: true
+
+  - trigger: ";ap"
+    replace: "app script "
+
+  - trigger: ";sb"
+    replace: "   • "
+
+  - trigger: ";ps"
+    replace: "password "
+
+  - trigger: ";nh"
+    replace: "日本語 "
+
+  - trigger: ";ev"
+    replace: "evidence "
+
+    
+  - trigger: ";ac "
+    replace: "architecture "
+    
+  - trigger: ";dc"
+    replace: "東京都北区豊島５丁目５番地５　４２３号"
+    
+  - trigger: ";se"
+    replace: "sale office "
+    propagate_case: true
+
+  - trigger: ";cf"
+    replace: "confirm"
+    propagate_case: true
+
+  - trigger: ";ck"
+    replace: "confirm KH"
+    propagate_case: true
+
+  - trigger: ";co"
+    replace: "confirm offshore"
+    propagate_case: true
+
+  - trigger: ";st"
+    replace: "npm start"
+
+  - trigger: ";dbw"
+    replace: "đồng bộ waypoint "
+
+  - trigger: ";tm"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+          
+  - trigger: ";fd"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%Y/%m/%d"
+
+  - trigger: ";dt"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%m/%d"
+          
+  - trigger: ";mo"
+    replace: " cd ja-kyosai-app-mock-server/ad_mock_server"
+    propagate_case: true
+
+  - trigger: ";df"
+    replace: "definition "
+    propagate_case: true
+
+  - trigger: ";de"
+    replace: "description "
+    propagate_case: true
+
+  - trigger: ";de"
+    replace: "description "
+    propagate_case: true
+
+  - trigger: ";de"
+    replace: "description "
+    propagate_case: true
+
+  - trigger: ";dn"
+    replace: "duong.nh-note: "
+    propagate_case: true
+
+
+
+  - trigger: ";sg"
+    replace: "suggest "
+
+  - trigger: ";me"
+    replace: "meaning "
+
+  - trigger: ";hh"
+    replace: "04/$|$ ご報告 "
+
+  - trigger: ";nd"
+    replace: "\\color{blue}\\rule[1mm]{350px}{1px} "
+
+  - trigger: ";h1"
+    replace: "#  "
+
+  - trigger: ";h2"
+    replace: "##  "
+
+  - trigger: ";h3"
+    replace: "###  "
+
+  - trigger: ";tk"
+    replace: "ticket"
+
+  - trigger: ";ie"
+    replace: "issue"
+
+  - trigger: ";em"
+    replace: "estimate "
+    propagate_case: true
+    
+  - trigger: ";et"
+    replace: "effort "
+    propagate_case: true
+    
+  - trigger: ";ep"
+    replace: "expect "
+    propagate_case: true
+
+  - trigger: ";csv"
+    replace: "chat-service "
+
+  - trigger: ";sv"
+    replace: "service "
+
+  - trigger: ";no"
+    replace: "edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;curved=0;strokeColor=#ff0000;entryX=0;entryY=0.633;entryDx=0;entryDy=0;entryPerimeter=0;"
+                     
+  - trigger: ";ye"
+    replace: "edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;strokeColor=#009900;"
+                     
+    
+
+  - trigger: ";av"
+    replace: "admin-service "
+  
+  - trigger: ";nv"
+    replace: "notification-service "
+
+  - trigger: ";mv"
+    replace: "mass-service "
+
+
+  - trigger: ";bl"
+    replace: "Backlog "
+    propagate_case: true
+
+  - trigger: ";na"
+    replace: "→ next action "
+    propagate_case: true
+
+  - trigger: ";dm"
+    replace: "Daily meeting "
+    propagate_case: true
+
+  - trigger: ";bk"
+    replace: "booking "
+    propagate_case: true
+
+  - trigger: ";wp"
+    replace: "waypoint "
+    propagate_case: true
+    
+
+  - trigger: ";fb"
+    replace: "feedback "
+    propagate_case: true
+
+  - trigger: ";to"
+    replace: "timeout "
+
+  - trigger: ";eo"
+    replace: "effort"
+
+
+  - trigger: ";rp"
+    replace: "report "
+    propagate_case: true
+  - trigger: ";sl"
+    replace: "Slack "
+
+  - trigger: ";ms"
+    replace: "message "
+
+  - trigger: ";ma"
+    replace: "MAAS-"
+    propagate_case: true
+
+
+  - trigger: ";grs"
+    replace: "git reset --soft origin/main"
+
+  - trigger: ";grh"
+    replace: "git reset --hard origin/main"
+
+  - trigger: ";nc"
+    replace: "No issue for call-service "
+
+  - trigger: ";ntn"
+    replace: "như thế nào "
+
+  - trigger: ";m1"
+    replace: "duong.nguyenhoang@vti.com.vn"
+
+  - trigger: ";m2"
+    replace: "damdandau1512@gmail.com"
+
+  - trigger: ";kntx"
+    replace: "khi nào test xong ? "
+
+  - trigger: ";tt"
+    replace: "↑ "
+  
+  - trigger: ";tb"
+    replace: "\t "
+
+  - trigger: ";cau"
+    replace: "catch up on the updates "
+
+  - trigger: ";sj"
+    replace: "$|$STG.json"
+
+  - trigger: ";oe"
+    replace: "offshore "
+    propagate_case: true
+
+  - trigger: ";td"
+    replace: "→ TODO: "
+
+
+
+    
+  - trigger: ";tg"
+    replace: "▼ "
+
+  - trigger: ";hv"
+    replace: "■ "
+
+  - trigger: ";ns"
+    replace: "★ "
+    
+  - trigger: ";cl"
+    replace: "Call "
+
+
+  - trigger: ";vtg"
+    replace: "曙橋駅～武蔵藤沢駅 "
+
+  - trigger: ";odl"
+    replace: "order by created_date desc limit 100 "
+
+# Edion
+    
+  - trigger: ";bs"
+    replace: "DeNA BayStars"
+    
+  - trigger: ";pr"
+    replace: "pre-waiting room"
+
+  - trigger: ";pc"
+    replace: "waiting room"
+
+  - trigger: ";vr"
+    replace: "Virtual Waiting Room"
+
+  - trigger: ";sc"
+    replace: "SWALLOW_EC"
+  
+  - trigger: ";rc"
+    replace: "REDS_EC"
+
+  - trigger: ";rp"
+    replace: "REDS_POINT_DELIVERY"
+
+  - trigger: ";sh"
+    replace: "SWALLOWS_HS"
+    
+  - trigger: ";ks"
+    replace: "仮想待合室"
+
